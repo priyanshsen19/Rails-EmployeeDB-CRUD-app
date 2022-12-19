@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row justify-content-center">
+<h1 clas="mt-4 mb-4 display-4">Employees Form</h1>
+</div>
+<% if flash[:errors]%>
+   <% flash[:errors].each do |error|%>
+   	<p style="color: red"><%= error%></p>
+   <%end%>
+<%end%>
+<br>
+<br>
+<br>
+<div class="row justify-content-center">
+<%= form_for @employee do |f|%>
+<div class="form-group">
+    <%= f.label :emp_id%><hr>&emsp;</hr>
+    <%= f.text_field :emp_id %>
+</div>
+<div class="form-group">
+    <%= f.label :company_id%><hr>&nbsp;</hr>
+    <%= f.text_field :company_id %>
+ </div>   
+<div class="form-group">
+    <%= f.label :name%><hr>&ensp;</hr>
+    <%= f.text_field :name %>
+</div>
+<div class="form-group">
+    <%= f.label :status%><hr>&ensp;</hr>
+    <%= f.text_field :status %>
+ </div>
+ <div class="form-group">   
+    <%= f.submit%>
+ </div>
+ <%end%>
+ </div>
+ </div>

@@ -1,0 +1,28 @@
+<div class="container">
+<div class="row justify-content-center">
+<h1 clas="mt-4 mb-4 display-4"><%= @employee.name%>'s Details</h1></div>
+<br>
+<p><h4>Employee id: <%= @employee.emp_id%></h4></p>
+<p><h4>Company id: <%= @employee.company_id%></h4></p>
+<p><h4>Status: <%= @employee.status%></h4></p>
+</div>
+<br>
+<div class="row justify-content-center"><h2>Tech Stack</h2></div>
+<br>
+<div class="row justify-content-center">
+<%= button_to "Enter your techstack",new_firm_path, method: :get%><br></div>
+<div class="row justify-content-center">
+<ul>
+   <%= @employee.firms.each do |firm|%>
+     <li><%= firm.techskill.name%><br>
+     <%=button_to "Drop techstack",firm_path(firm),method: :delete%><br></li>
+     <%end%>
+</ul>
+</div>
+<div class="row justify-content-center">
+<%= button_to "Edit Employee",edit_employee_path,method: :get%></div><br>
+<div class="row justify-content-center">
+<%= button_to "Destroy Employee",employee_path,method: :delete%></div><br>
+<div class="row justify-content-center">
+<%= link_to "Go back",root_path%></div>
+</div>

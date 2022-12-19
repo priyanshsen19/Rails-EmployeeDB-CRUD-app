@@ -1,0 +1,20 @@
+<div class="container">
+<br>
+<br>
+<br>
+<div class="row justify-content-center">
+<h1>Employees Corner</h1></div>
+<br>
+<br>
+<br>
+<br>
+<div class="row justify-content-center">
+<%= button_to "Add New Employee", new_employee_path,method: :get %></div>
+<div class="row justify-content-center">
+<ul>
+    <% @employees.each do |employee|%>
+    	<li><%=link_to employee.name,employee_path(employee) %></li>
+    	<%end%>
+ </ul>
+ </div>
+ </div>
