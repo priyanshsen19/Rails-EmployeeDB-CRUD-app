@@ -12,12 +12,22 @@
 <div class="row justify-content-center">
 <%= button_to "Enter your techstack",new_firm_path, method: :get%><br></div>
 <div class="row justify-content-center">
-<ul>
-   <%= @employee.firms.each do |firm|%>
-     <li><%= firm.techskill.name%><br>
-     <%=button_to "Drop techstack",firm_path(firm),method: :delete%><br></li>
-     <%end%>
-</ul>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th scope="col">Techskill</th>
+<th scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<%= @employee.techskills.each do |firm|%>
+<tr>
+<td><%= firm.name %></td>
+<td><%=button_to "Delete",firm_path(firm),method: :delete%></td>
+</tr>
+<% end %>
+</tbody>
+</table>
 </div>
 <div class="row justify-content-center">
 <%= button_to "Edit Employee",edit_employee_path,method: :get%></div><br>
