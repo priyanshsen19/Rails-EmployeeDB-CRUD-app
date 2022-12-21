@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+techskills=Techskill.create([{name:"Ruby on rails"},{name: "Node with Typescript"},{name: "Vue.js"},{name: "JavaScript"},{name: "Next.js"},{name: "Nest.js"},{name: "MySQL"}])
