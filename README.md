@@ -1,7 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Prerequisites
+
+Do the following in your terminal
+* rvm use 3.1.3  (ruby version 3.1.3)
+* rails db:seed  (To load the default data)
+* rails server
 
 Things you may want to cover:
 
