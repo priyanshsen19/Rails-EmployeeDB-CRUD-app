@@ -28,6 +28,7 @@ class EmployeesController < ApplicationController
   def update
       @employee= Employee.find(params[:id])
       @employee= Employee.update(params.require(:employee).permit(:emp_id,:company_id,:name,:status))
+       @employee= Employee.find(params[:id])
       redirect_to employee_path(@employee)	
   end
 
