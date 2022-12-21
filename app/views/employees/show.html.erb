@@ -10,29 +10,30 @@
 <div class="row justify-content-center"><h2>Tech Stack</h2></div>
 <br>
 <div class="row justify-content-center">
-<%= button_to "Enter your techstack",new_firm_path, method: :get%><br></div>
+<%= button_to "Choose your techskills",new_firm_path, method: :get , class:"btn btn-dark"%><br></div>
+<br>
 <div class="row justify-content-center">
 <table class="table table-bordered">
 <thead>
 <tr>
-<th scope="col">Techskill</th>
-<th scope="col">Action</th>
+<th scope="col" style="text-align: center">Techskill</th>
+<th scope="col" style="text-align: center">Action</th>
 </tr>
 </thead>
 <tbody>
 <% @employee.techskills.each do |firm|%>
 <tr>
-<td><%= firm.name %></td>
-<td><%=button_to "Delete",firm_path(firm),method: :delete%></td>
+<td style="text-align: center"><%= firm.name %></td>
+<td style="text-align: center"><%=button_to "Delete",firm_path(firm),method: :delete , class:"btn btn-dark"%></td>
 </tr>
 <% end %>
 </tbody>
 </table>
 </div>
 <div class="row justify-content-center">
-<%= button_to "Edit Employee",edit_employee_path,method: :get%></div><br>
+<%= button_to "Edit Employee",edit_employee_path,method: :get , class:"btn btn-dark"%></div><br>
 <div class="row justify-content-center">
-<%= button_to "Destroy Employee",employee_path,method: :delete%></div><br>
+<%= button_to "Destroy Employee",employee_path,method: :delete , class:"btn btn-dark"%></div><br>
 <div class="row justify-content-center">
 <%= link_to "Go back",root_path%></div>
 </div>
