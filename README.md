@@ -1,6 +1,6 @@
 # README
 
-#Prerequisites
+# Prerequisites
 
 Do the following in your terminal
 * rvm use 3.1.3  (ruby version 3.1.3)
