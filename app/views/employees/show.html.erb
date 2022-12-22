@@ -21,9 +21,9 @@
 </tr>
 </thead>
 <tbody>
-<% @employee.techskills.each do |firm|%>
+<% @employee.firms.each do |firm|%>
 <tr>
-<td style="text-align: center"><%= firm.name %></td>
+<td style="text-align: center"><%= firm.techskill.name %></td>
 <td style="text-align: center"><%=button_to "Delete",firm_path(firm),method: :delete , class:"btn btn-dark"%></td>
 </tr>
 <% end %>
