@@ -21,8 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_062539) do
   end
 
   create_table "firms", force: :cascade do |t|
-    t.string "techskill_id"
     t.string "employee_id"
+    t.string "techskill_id"
     t.string "name"
     t.string "verified"
     t.datetime "created_at", null: false
